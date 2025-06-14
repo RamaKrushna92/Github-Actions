@@ -11,4 +11,4 @@ jobs:
       - name: multi line shell
         run: |
             echo "first line"
-            echo "second line"
+            echo "done"
