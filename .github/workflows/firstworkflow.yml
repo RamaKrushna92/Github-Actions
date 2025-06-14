@@ -8,3 +8,7 @@ jobs:
         run: echo "Hello, Welcome to github Actions"
       - name: say bye for the day !!
         run: echo "leave for the day !!, bye !!"
+      - name: multi line shell
+        run: |
+            echo "first line"
+            echo "second line"
