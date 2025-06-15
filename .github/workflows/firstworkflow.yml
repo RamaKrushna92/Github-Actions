@@ -1,5 +1,6 @@
-name: GitHub Actions First workflow
-on: workflow_dispatch
+name: First-workflow
+on: 
+  push
 jobs:
   hello-gitActions:
     runs-on: ubuntu-latest
