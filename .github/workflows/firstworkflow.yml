@@ -12,4 +12,4 @@ jobs:
       - name: multi line shell
         run: |
             echo "first line"
-            echo "done"
+            echo "done.."
