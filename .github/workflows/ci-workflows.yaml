@@ -10,17 +10,17 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v7
       
-      - name: validate the repository
-        run: |
-          pwd
-          ls -la
-          find . -maxdepth 4 -type f -name "Dockerfile" -print
-      
-      # - name: docker image build
+      # - name: validate the repository
       #   run: |
-      #     cd Github-Actions/projectfiles
-      #     docker build -t flask-github:v1.0 .
+      #     pwd
+      #     ls -la
+      #     find . -maxdepth 4 -type f -name "Dockerfile" -print
       
-      # - name: list out images
-      #   run: docker images
+      - name: docker image build
+        run: |
+          cd projectfiles
+          docker build -t flask-github:v1.0 .
+      
+      - name: list out images
+        run: docker images
         
