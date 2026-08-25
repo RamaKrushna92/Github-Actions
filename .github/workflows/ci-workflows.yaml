@@ -26,6 +26,10 @@ jobs:
       
       - name: Run Container
         run: docker run -d -p 5000:5000 --name flask-gihub-container flask-github:v1.0
+      
+      - name: list out containers
+        run: docker ps
+      
       - name: healthcheck
         run: |
           sleep 5
