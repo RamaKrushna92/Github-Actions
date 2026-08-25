@@ -10,7 +10,7 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v7
       - name: build docker image
-        run: docker build -t flask-github:v1.0
+        run: docker build -t flask-github:v1.0 .
       - name: list out images
         run: docker images
         
