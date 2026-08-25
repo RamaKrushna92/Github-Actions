@@ -1,0 +1,16 @@
+name: Falsk-CI-Worlflow
+on:
+  push: 
+
+jobs:
+  flask-ci-job:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v7
+      - name: build docker image
+        run: docker build -t flask-github:v1.0
+      - name: list out images
+        run: docker images
+        
