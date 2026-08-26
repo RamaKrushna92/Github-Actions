@@ -4,14 +4,14 @@ on:
     types:
       - opened
     branches: 
-      feature/**
+      - main
     paths: 
-      - app/**
+      - 'app/**'
   push:
     branches: 
-      feature/**
+      - 'feature/**'
     paths: 
-      - app/**
+      - 'app/**'
 jobs:
   execute-shell-python-job:
     runs-on: ubuntu-latest
@@ -19,16 +19,17 @@ jobs:
       - name: checkout repository
         uses: actions/checkout@v7
         with:
-          ref: feature/**
+          ref: feature/merge-branch
 
       - name: print the currect dir details
         run: |
-          pwd; cd app; ls -la
+          pwd
 
       - name: execute the shell file
-        run: ./app.sh
-      
+        run: app.sh
+        working-directory: app
       - name: execute the python file
-        run: ./app.py
+        run: app.py
+        working-directory: app
 
       
