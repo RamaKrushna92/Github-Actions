@@ -24,7 +24,7 @@ jobs:
           ./app.sh
         working-directory: app
       - name: execute the python file
-        run: ./app.py
+        run: python3 app.py
         working-directory: app
 
       
