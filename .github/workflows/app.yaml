@@ -9,7 +9,7 @@ on:
       - 'app/**'
   push:
     branches: 
-      - 'feature/**'
+      - 'feature/merge-branch'
     paths: 
       - 'app/**'
 jobs:
