@@ -5,8 +5,6 @@ on:
       - opened
     branches: 
       - 'main'
-    paths: 
-      - 'app/**'
   push:
     branches: 
       - 'feature/merge-branch'
@@ -17,14 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: checkout repository
-        uses: actions/checkout@v6
-        with:
-          ref: feature/merge-branch
+        uses: actions/checkout@v4
+        # with:
+        #   ref: feature/merge-branch
 
       - name: print the currect dir details
         run: |
           pwd
-
       - name: execute the shell file
         run: app.sh
         working-directory: app
