@@ -19,7 +19,9 @@ jobs:
         run: |
           pwd
       - name: execute the shell file
-        run: ./app.sh
+        run: |
+          chmod +x *
+          ./app.sh
         working-directory: app
       - name: execute the python file
         run: ./app.py
