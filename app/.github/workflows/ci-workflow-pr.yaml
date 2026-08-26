@@ -1,6 +1,7 @@
 name: ci-pr-workflow
 on: 
-  pull_request:
+  - pull_request
+  - push
 
 jobs:
   execute-shell-python-job:
