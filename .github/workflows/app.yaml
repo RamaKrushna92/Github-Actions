@@ -1,20 +1,30 @@
 name: ci-pr-workflow
 on: 
-  - pull_request
-  - push
-
+  pull_request:
+    types:
+      - opened
+    branches: 
+      feature/**
+    paths: 
+      - app/**
+  push:
+    branches: 
+      feature/**
+    paths: 
+      - app/**
 jobs:
   execute-shell-python-job:
     runs-on: ubuntu-latest
-
     steps: 
       - name: checkout repository
         uses: actions/checkout@v7
         with:
           ref: feature/**
+
       - name: print the currect dir details
         run: |
-          pwd; cd app
+          pwd; cd app; ls -la
+
       - name: execute the shell file
         run: ./app.sh
       
