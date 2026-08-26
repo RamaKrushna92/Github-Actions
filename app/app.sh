@@ -5,5 +5,5 @@ echo "I am executed and printed the welcome notes below"
 
 echo "Welcom to GithubActions workflows."
 echo  "--------------------------"
-echo "Hello $USER, how are you..?"
+echo "Hello $USER, how are you...?"
 echo "--------------------------"
