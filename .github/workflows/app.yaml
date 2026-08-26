@@ -8,16 +8,12 @@ on:
   push:
     branches: 
       - 'feature/merge-branch'
-    paths: 
-      - 'app/**'
 jobs:
   execute-shell-python-job:
     runs-on: ubuntu-latest
     steps: 
       - name: checkout repository
         uses: actions/checkout@v4
-        # with:
-        #   ref: feature/merge-branch
 
       - name: print the currect dir details
         run: |
