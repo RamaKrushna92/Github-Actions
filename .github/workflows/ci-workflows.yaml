@@ -1,6 +1,8 @@
 name: Falsk-CI-Worlflow
 on:
   push: 
+    branches:
+      - feature/*
 
 jobs:
   flask-ci-job:
