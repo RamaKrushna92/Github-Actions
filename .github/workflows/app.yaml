@@ -10,13 +10,15 @@ jobs:
     steps: 
       - name: checkout repository
         uses: actions/checkout@v7
+        with:
+          ref: feature/**
       - name: print the currect dir details
         run: |
           pwd; cd app
       - name: execute the shell file
-        uses: ./app.sh
+        run: ./app.sh
       
       - name: execute the python file
-        uses: ./app.py
+        run: ./app.py
 
       
