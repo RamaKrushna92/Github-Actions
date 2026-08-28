@@ -17,9 +17,15 @@ jobs:
       - name: print repository
         run:  |
           echo "===================================="
+          echo        "Custom variables values."
+          echo "===================================="
+          echo "trigger_event: $trigger_event"
+          echo "print_info: $print_info"
+          echo ""
+          echo "===================================="
           echo        "Variables values."
           echo "===================================="
-          echo "Repo Name: $GITHUB_ACTION_REPOSITORY"
+          echo "Repo Name: $GITHUB_ACTION"
           echo "Owner Name: $GITHUB_REPOSITORY_OWNER"
           echo "Triggered Event: $GITHUB_EVENT_NAME"
           echo ""
