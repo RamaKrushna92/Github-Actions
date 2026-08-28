@@ -26,5 +26,15 @@ jobs:
       - name: execute the python file
         run: python3 app.py
         working-directory: app
+  
+  print-repository-details-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print-owner
+        run: | 
+          echo "Repository Name: $GITHUB_REPOSITORY"
+          echo "Repo Owner: $GITHUB_REPOSITORY_OWNER"
+
+
 
       

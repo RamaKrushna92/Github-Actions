@@ -5,5 +5,9 @@ echo "I am executed and printed the welcome notes below"
 
 echo "Welcom to GithubActions workflows."
 echo  "--------------------------"
+echo "Hello $GITHUB_REPOSITORY_OWNER, how are you...?"
+echo "--------------------------"
+
+echo "job got executed successfully !!"
 echo "Hello $USER, how are you...?"
 echo "--------------------------"
