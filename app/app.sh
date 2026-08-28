@@ -9,3 +9,5 @@ echo "Hello $GITHUB_REPOSITORY_OWNER, how are you...?"
 echo "--------------------------"
 
 echo "job got executed successfully !!"
+echo "Hello $USER, how are you...?"
+echo "--------------------------"
