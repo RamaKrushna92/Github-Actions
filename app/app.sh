@@ -7,3 +7,5 @@ echo "Welcom to GithubActions workflows."
 echo  "--------------------------"
 echo "Hello $USER, how are you...?"
 echo "--------------------------"
+
+echo "job got executed successfully !!"
