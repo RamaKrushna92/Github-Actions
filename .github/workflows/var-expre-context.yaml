@@ -1,0 +1,46 @@
+name: CI-VAR-EXPRESSION-CONTEXT-WORKFLOWS
+on:
+  push:
+    branches:
+      - main
+      - fature/**
+env:
+  trigger_event: push
+  print_info: commonvariable_value
+      
+jobs:
+  print-workflow-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+      - name: print repository
+        run:  |
+          echo "===================================="
+          echo        "Variables values."
+          echo "===================================="
+          echo "Repo Name: $GITHUB_ACTION_REPOSITORY"
+          echo "Owner Name: $GITHUB_REPOSITORY_OWNER"
+          echo "Triggered Event: $GITHUB_EVENT_NAME"
+          echo ""
+
+          echo "===================================="
+          echo "github context values"
+          echo "===================================="
+          echo "github repo: ${{ github.action_repository }}"
+          echo "github Actor: ${{ github.actor }}"
+          echo "github Actor ID: ${{ github.actor_id }}"
+          echo ""
+
+          echo "===================================="
+          echo "github expression"
+          echo "===================================="
+          echo "Is Main Branch: ${{ github.ref == 'refs/heads/main' }}"
+          echo "Is feature Branch: ${{ github.ref == 'refs/heads/feature/**' }}"
+          echo ""
+
+          echo "===================================="
+          echo "github context vs variable"
+          echo "===================================="
+          echo "Context Ref: ${{ github.ref }}"
+          echo "Variable Ref: $GITHUB_REF"
